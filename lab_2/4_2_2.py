@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-x = np.linspace(0,10,60)
+x = np.linspace(-10,10,60)
 y1= (x**2 - 1) / x
 y2=np.cos(x)
 
@@ -13,7 +13,8 @@ plt.xlabel('x')
 plt.ylabel('y1')
 plt.grid(True)
 plt.legend(['y1 = (x^2 - 1) / x'])
-
+plt.axhline(0, color='black', linewidth=1)
+plt.axvline(0, color='black', linewidth=1)
 
 plt.subplot(1, 2, 2)
 plt.plot(x, y2, "black", linewidth=1)
@@ -22,6 +23,8 @@ plt.xlabel('x')
 plt.ylabel('y2')
 plt.grid(True) 
 plt.legend(['y2 = cos(x)'],loc='upper right')
+plt.axhline(0, color='black', linewidth=1)
+plt.axvline(0, color='black', linewidth=1)
 
 plt.tight_layout(pad=3)
 plt.show()

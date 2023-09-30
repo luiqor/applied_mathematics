@@ -7,5 +7,6 @@ plt.figure(figsize=(9, 9))
 plt.polar(fi, ro, "r")
 plt.title('Крива другого порядку в полярній системі координат', fontsize=14)
 plt.grid(True)
+plt.legend(['y1 = -np.sqrt((1-(x**2/20))*5)'])
 
 plt.show()
