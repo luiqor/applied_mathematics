@@ -1,12 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
-fi = np.linspace(0, 2 * np.pi, 1000)
-ro = 3 / (1+ 2 * np.cos(fi))
+import matplotlib.axes as ax
+theta = np.linspace(0, np.pi*2, 9000000)
+ro = (3 / (1+ 2 * np.cos(theta)) )
 
-plt.figure(figsize=(9, 9))
-plt.polar(fi, ro, "r")
+
+plt.figure(figsize=(6, 6))
+plt.polar(theta, ro, "r", label='ro = 3 / (1+ 2 * np.cos(fi))')
 plt.title('Крива другого порядку в полярній системі координат', fontsize=14)
 plt.grid(True)
-plt.legend(['y1 = -np.sqrt((1-(x**2/20))*5)'])
+plt.legend()
 
 plt.show()

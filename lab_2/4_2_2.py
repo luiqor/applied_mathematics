@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-x = np.linspace(-10,10,60)
+x = np.linspace(0,10,60)
 y1= (x**2 - 1) / x
 y2=np.cos(x)
 
