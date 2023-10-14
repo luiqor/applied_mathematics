@@ -2,15 +2,16 @@ import matplotlib.pyplot as plt
 import matplotlib.axes as ax
 import numpy as np
 np.random.seed(200)
-x = np.random.randn(700, 3)
+x = np.random.randn(700, 4)
    
-colors = ['orange', 'purple', 'lime']
+colors = ['orange', 'purple', 'lime', 'cyan']
 #colors = plt.clim (vmin = 'r', vmax = 'blue')
  
-plt.hist(x, bins = 70,
-         color = colors,
-         label = colors)
+n, bins, patches = plt.hist(x, bins = 70,
+                    color = colors,
+                    label = ['один', 'два', 'три','три'])
  
+
 plt.legend()
  
 plt.title('Гісторграма matplotlib',
@@ -18,4 +19,4 @@ plt.title('Гісторграма matplotlib',
 
 plt.show()
 
-# гістограми у 6 лекції Z
+# гістограми у 6 лекції 
