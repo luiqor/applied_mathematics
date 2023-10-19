@@ -7,22 +7,16 @@ x = np.linspace(-1.3, 1.3, 100)
 y = np.linspace(-1.3, 1.3, 100)
 X, Y = np.meshgrid(x, y)
 
-# значення z для параболоїда та площини x-z
 Z1 = X**2 + Y**2
 Z2 = X
 
-# 3D графік
 fig = plt.figure()
 ax=Axes3D(fig)
 ax = fig.add_subplot(111, projection='3d')
 
-# поверхню параболоїда
 surf1 = ax.plot_surface(X, Y, Z1, color='g')
-
-# площину x-z
 surf2 = ax.plot_surface(X, Y, Z2, color='b')
 
-# підписи
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
