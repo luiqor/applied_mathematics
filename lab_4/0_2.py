@@ -18,7 +18,7 @@ def animate(i):
     y = t * np.cos(t)
     xdata.append(x)
     ydata.append(y)
-    line.set_data(xdata, ydata)
+    line.set_data(x, y)
     return line,
 
 plt.axis('off')

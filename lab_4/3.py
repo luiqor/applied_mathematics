@@ -4,33 +4,29 @@ import matplotlib.animation as animation
 
 # Create the figure with a subplot for the polar plot
 fig = plt.figure()
-ax = fig.add_subplot(111, projection='polar')
+ax = fig.add_subplot(projection='polar')
+frames = 500
 
-# Create the initial data for the polar plot
-theta = np.linspace(0, 2 * np.pi, 1000)
-r = np.abs(3 * np.sin(4 * theta))
+line, = ax.plot([], [], lw=2)
+ax.set_rmax(4)
 
-line, = ax.plot(theta, r, color='purple')
-ax.set_title('Полярний графік')
-
-# Initialize a function to update the polar plot
 def init():
-    line.set_ydata(np.ma.array(theta))
+    line.set_data([], [])
     return line,
 
-def update(frame):
-    # Modify the parameters for the 4-petal rose
-    theta = np.linspace(0, 2 * np.pi, 1000)
-    r = np.abs(3 * np.sin(2 * theta + 0.1 * frame))
-    line.set_ydata(r)
-    return line,
+def update(frames):
+        theta = np.linspace(0, 2 * np.pi, frames)
+        r = np.abs(3 * np.sin(2 * theta + 0.05 * frames))
+        line.set_data(theta, r)
+        return line,
+   
 
-# Create the animation
-ani = animation.FuncAnimation(fig, update, init_func=init, frames=range(1, 500), blit=True, interval=20)
+# Create the animation  
+ani = animation.FuncAnimation(fig, update, init_func=init, 
+                              frames=frames, blit=True, repeat = False, interval = 24)
 
-plt.tight_layout()
+ax.set_title('Полярний графік')
 plt.show()
-
 
 
 # # Add the third subplot with a polar plot
