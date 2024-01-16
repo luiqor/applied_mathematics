@@ -62,5 +62,5 @@ def update(frame):
        ani.event_source.stop()
 
 ani = FuncAnimation(fig, update, init_func=init, frames=40, repeat=10)
-
+ani.save('sf.gif', writer='pillow', fps=40)
 plt.show()

@@ -41,3 +41,4 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, 100), init_func=init, blit=
 
 # Show the animation
 plt.show()
+ani.save('pr9.gif', writer='pillow', fps=40)
