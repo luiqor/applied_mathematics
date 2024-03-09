@@ -16,5 +16,3 @@ plt.grid(True)
 
 
 plt.show()
-
-#https://stackoverflow.com/questions/13865200/attempting-to-draw-hyperbola-in-matplotlib-produces-line-along-vertical-asymptot

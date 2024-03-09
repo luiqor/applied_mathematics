@@ -5,10 +5,10 @@ C = np.array([-1,3,2])
 D = np.array([2,6,1])
 
 #vAB - вектор AB і т.д.
-vAB= np.array( [B[0] - A[0], B[1] - A[1], B[2] - A[2]])
-vAC= np.array( [C[0] - A[0], C[1] - A[1], C[2] - A[2]])
-vAD= np.array( [D[0] - A[0], D[1] - A[1], D[2] - A[2]])
-#спростити просто А-Б, подивсиь у Насті
+vAB= B - A
+vAC= C - A
+vAD= D - A
+#спрощена
 
 # векторний добуток np.cross()
 ABxAC = np.cross(vAB, vAC)

@@ -37,5 +37,5 @@ ax.set_ylim3d([-1.8,1.8])
 ax.set_zlim3d([-1.4,4])
 
 ani = FuncAnimation(fig, animate, init_func =init, frames=200, blit=False)
-plt.show() #зробити оберт самих фігурок
+plt.show()
 
